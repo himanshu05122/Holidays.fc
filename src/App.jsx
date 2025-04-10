@@ -4,7 +4,7 @@ import Home from './Components/Home'
 import Cards from './Components/Cards'
 import Popular from './Components/Popular'
 import Footer from './Components/Footer'
-
+import ScrollToTop from './Components/ScrollToTop';
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
     <Cards />
     <Popular />
     <Footer />
+    <ScrollToTop />
    
     </>
   )
