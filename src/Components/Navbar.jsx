@@ -43,11 +43,19 @@ const Navbar = () => {
         <FaFacebookF className="text-pink-500 text-sm" />
       </div>
 
+      {/* Overlay for blur and dim effect */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 transition-all duration-300"
+          onClick={() => setIsSidebarOpen(false)}
+        ></div>
+      )}
+
       {/* Navbar */}
       <div
         className={`navbar mt-7 flex justify-between items-center px-4 sticky top-0 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/80 backdrop-md shadow-sm z-40"
+            ? "bg-white/80 backdrop-md shadow-sm z-50"
             : "bg-base-200 z-0"
         }`}
       >
@@ -70,7 +78,7 @@ const Navbar = () => {
                 "Blogs",
               ].map((item) => (
                 <li key={item} className="hover:bg-transparent">
-                  <a className="whitespace-nowrap hover:text-pink-500 hover:underline underline-offset-8 decoration-pink-500 px-2 max-[1024px]:px-1">
+                  <a className="whitespace-nowrap hover:text-pink-500 hover:underline underline-offset-8 decoration-gray-400 px-2 max-[1024px]:px-1">
                     {item}
                   </a>
                 </li>
