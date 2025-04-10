@@ -9,8 +9,8 @@ const Popular = () => {
         <h1 className="text-5xl font-bold">
           Popular <span className="text-pink-600">Tours</span>
         </h1>
-        <button className="relative inline-flex mt-3 items-center cursor-pointer text-black underline font-semibold underline-offset-9 hover:underline hover:text-blue-600 transition-all duration-300">
-                <span className="mr-2 text-gray-500">View All</span>
+        <button className="relative inline-flex mt-17 items-center cursor-pointer text-black underline  decoration-gray-400 font-semibold underline-offset-9 hover:underline hover:text-blue-600 transition-all duration-300">
+                <span className="mr-2 text-black">See More</span>
                 
                 {/* Stylish Arrow */}
                 <FaArrowRight className="text-gray-500 text-xl transform transition-transform duration-300 group-hover:translate-x-2 group-hover:text-blue-600" />

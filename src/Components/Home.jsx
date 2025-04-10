@@ -93,7 +93,7 @@ const Home = () => {
         <img
           src={fareclubs}
           alt="Travel Destination"
-          className="w-[90%] max-w-[350px] rounded-lg sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] h-150 block z-0"
+          className="w-[90%] max-w-[350px] rounded-lg sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] h-170 block z-0"
         />
       </div>
     </div>
