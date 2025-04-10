@@ -24,7 +24,7 @@ const Navbar = () => {
         <FaFacebookF className="text-pink-500 text-sm" />
       </div>
 
-      {/* Email & Contact (Tablet Only: Top Left) */}
+      {/* Email & Contact (Tablet Only) */}
       <div className="hidden md:flex absolute top-2 left-4 gap-4 text-sm md:visible lg:hidden z-50">
         <div className="flex items-center gap-2">
           <Mail className="text-pink-500 h-4 w-4" />
@@ -36,7 +36,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Social Icons (Tablet Only: Top Right) */}
+      {/* Social Icons (Tablet Only) */}
       <div className="hidden md:flex lg:hidden absolute top-2 right-4 gap-3 z-50">
         <FaTwitter className="text-pink-500 text-sm" />
         <FaYoutube className="text-pink-500 text-sm" />
@@ -51,21 +51,26 @@ const Navbar = () => {
             : "bg-base-200 z-0"
         }`}
       >
-        {/* Left: Logo */}
+        {/* Logo */}
         <div className="navbar-start w-full flex-1 flex justify-center sm:justify-start mt-2">
           <a href="/" className="btn btn-ghost text-xl">
             <img src={logo} alt="FareClubs" className="h-10" />
           </a>
         </div>
 
-        {/* Right: Desktop Menu + Search + Hamburger Icon */}
+        {/* Menu Items */}
         <div className="navbar-end flex items-center mt-2">
-          {/* Desktop Menu (Large Screens) */}
           <div className="hidden lg:flex">
-            <ul className="menu menu-horizontal text-blue-500 px-1 space-x-2 text-sm">
-              {["Pilgrimage", "Easy VISA Destinations", "Honeymoon", "Activities", "Blogs"].map((item) => (
+            <ul className="flex flex-nowrap items-center text-blue-500 px-1 space-x-2 max-[1024px]:space-x-1 max-[1024px]:text-xs max-[1024px]:px-0">
+              {[
+                "Pilgrimage",
+                "Easy VISA Destinations",
+                "Honeymoon",
+                "Activities",
+                "Blogs",
+              ].map((item) => (
                 <li key={item} className="hover:bg-transparent">
-                  <a className="hover:text-pink-500 hover:underline underline-offset-8 decoration-pink-500 px-2">
+                  <a className="whitespace-nowrap hover:text-pink-500 hover:underline underline-offset-8 decoration-pink-500 px-2 max-[1024px]:px-1">
                     {item}
                   </a>
                 </li>
@@ -73,12 +78,12 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Search Icon (Large Screens) */}
+          {/* Search Icon */}
           <button className="btn btn-ghost hidden lg:flex">
             <Search className="h-5 w-5 text-gray-200" />
           </button>
 
-          {/* Hamburger Icon (Mobile/Tablet) */}
+          {/* Hamburger Menu */}
           <button
             className="btn border-2 h-9 w-9 border-gray-300 btn-ghost ml-2"
             onClick={() => setIsSidebarOpen(true)}
@@ -88,7 +93,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Sidebar (Mobile/Tablet) */}
+      {/* Sidebar */}
       <div
         className={`fixed top-0 right-0 h-screen w-72 bg-gray-800 text-gray-200 shadow-lg z-50 transform ${
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
@@ -101,7 +106,13 @@ const Navbar = () => {
         </div>
 
         <ul className="flex flex-col py-4">
-          {["Pilgrimage", "Easy VISA Destinations", "Honeymoon", "Activities", "Blogs"].map((item) => (
+          {[
+            "Pilgrimage",
+            "Easy VISA Destinations",
+            "Honeymoon",
+            "Activities",
+            "Blogs",
+          ].map((item) => (
             <li
               key={item}
               className="hover:text-white px-6 py-3 w-full border-b border-gray-600 cursor-pointer"

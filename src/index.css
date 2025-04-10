@@ -1,2 +1,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+    .only-lg\\:-mt-10 {
+      margin-top: -2.5rem; /* Tailwind's mt-10 */
+    }
+  }
+  

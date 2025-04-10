@@ -22,31 +22,39 @@ const Home = () => {
         </p>
 
         {/* Search Bar Container */}
-        <div className="relative mt-8 md:mt-28 lg:mt-10 xl:mt-28">
+        <div className={`
+          relative 
+          mt-8 
+          md:mt-28 
+          lg:mt-40 
+          xl:mt-55 
+          only-lg:-mt-10 
+          min-[1024px]:max-[1440px]:-mt-6
+        `}>
           {/* White Background Only on Mobile */}
           <div className="absolute inset-0 bg-white rounded-lg shadow-lg sm:hidden z-0" />
 
           {/* Search Bar */}
-          <div className="w-full h-auto sm:h-28 lg:w-6/4 xl:w-4xl mx-auto mt-40 bg-white shadow-lg rounded-2xl flex flex-col md:flex-row items-center gap-3 sm:gap-4 relative z-10 text-center px-3 py-4 sm:px-0 sm:py-0">
+          <div className="w-full h-auto sm:h-28 lg:w-6/4 xl:w-4xl mx-auto bg-white shadow-lg rounded-2xl flex flex-col md:flex-row items-center gap-4 sm:gap-4 relative z-10 text-center px-4 py-8 sm:px-0 sm:py-0">
             {/* Search Input */}
             <div className="flex flex-col flex-1 w-full">
-              <label className="text-xs sm:text-sm px-2 font-semibold italic text-gray-700">
+              <label className="text-sm sm:text-sm px-2 font-semibold italic text-gray-700">
                 Keywords
               </label>
               <input
                 type="text"
                 placeholder="Type Your Keywords"
-                className="mt-1 px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base rounded-lg border-none focus:ring-0 focus:border-pink-500 outline-none w-full"
+                className="mt-2 px-4 py-4 text-base sm:px-4 sm:py-3 sm:text-base rounded-lg border-none focus:ring-0 focus:border-pink-500 outline-none w-full"
               />
             </div>
 
             {/* Destination Select */}
             <div className="flex flex-col flex-1 w-full relative">
-              <label className="text-xs sm:text-sm font-semibold italic text-gray-700">
+              <label className="text-sm sm:text-sm font-semibold italic text-gray-700">
                 Destination
               </label>
-              <div className="relative">
-                <select className="mt-1 px-3 sm:px-4 py-2 sm:py-3 pr-10 text-sm sm:text-base rounded-lg border-none focus:ring-0 focus:border-pink-500 appearance-none outline-none w-full">
+              <div className="relative mt-2">
+                <select className="px-4 py-4 text-base pr-10 sm:py-3 sm:text-base rounded-lg border-none focus:ring-0 focus:border-pink-500 appearance-none outline-none w-full">
                   <option>Any</option>
                   <option>Paris</option>
                   <option>New York</option>
@@ -58,11 +66,11 @@ const Home = () => {
 
             {/* Duration Select */}
             <div className="flex flex-col flex-1 w-full relative">
-              <label className="text-xs sm:text-sm font-semibold italic text-gray-700">
+              <label className="text-sm sm:text-sm font-semibold italic text-gray-700">
                 Duration
               </label>
-              <div className="relative">
-                <select className="mt-1 px-3 sm:px-4 py-2 sm:py-3 pr-10 text-sm sm:text-base rounded-lg border-none focus:ring-0 focus:border-pink-500 appearance-none outline-none w-full">
+              <div className="relative mt-2">
+                <select className="px-4 py-4 text-base pr-10 sm:py-3 sm:text-base rounded-lg border-none focus:ring-0 focus:border-pink-500 appearance-none outline-none w-full">
                   <option>Any</option>
                   <option>1 Week</option>
                   <option>2 Weeks</option>
@@ -73,8 +81,8 @@ const Home = () => {
             </div>
 
             {/* Search Button */}
-            <button className="w-full flex-col md:w-auto flex items-center justify-center bg-pink-600 hover:bg-pink-700 transition px-5 sm:px-8 py-4 sm:py-8 text-white text-sm sm:text-lg italic font-medium rounded-r-2xl shadow-md">
-              <FaSearch className="text-base sm:text-xl mr-2" /> Search Now
+            <button className="w-full flex-col md:w-auto flex items-center justify-center bg-pink-600 hover:bg-pink-700 transition px-6 py-5 sm:px-8 sm:py-8 text-white text-base sm:text-lg italic font-medium rounded-lg sm:rounded-r-lg sm:rounded-l-none shadow-md">
+              <FaSearch className="text-lg sm:text-xl mr-2" /> Search Now
             </button>
           </div>
         </div>
